@@ -1,99 +1,95 @@
-Dragon Picker - Unity Game
+# **Dragon Picker - Unity Game**
 
-Overview
+## **Overview**
+**Dragon Picker** is a Unity-based game where the player controls a shield to catch falling dragon eggs while avoiding missing them. If an egg is missed, a shield is removed, and if all shields are gone, the game restarts. The game features a **main menu**, **score system**, **sound effects**, and **visual effects**.
 
-Dragon Picker is a Unity-based game where the player controls a shield to catch falling dragon eggs while avoiding missing them. If an egg is missed, a shield is removed, and if all shields are gone, the game restarts. The game features a main menu, score system, sound effects, and visual effects.
+---
 
-Features
+## **Features**
+- 🐉 **Falling Dragon Eggs:** Eggs are dropped by the enemy dragon.
+- 🛡️ **Energy Shields:** Shields protect eggs from hitting the ground.
+- 💥 **Egg Collision Effects:** Explosions occur when an egg hits the ground.
+- 🎵 **Sound Effects:** Egg collisions trigger audio feedback.
+- 🎮 **Pause & Restart Mechanism:** Pause the game and restart upon losing all shields.
+- 🏆 **Score System:** Score increases when eggs are successfully caught.
+- 📜 **Main Menu:** Start the game from the menu.
 
-🐉 Falling Dragon Eggs: Eggs are dropped by the enemy dragon.
+---
 
-🛡️ Energy Shields: Shields protect eggs from hitting the ground.
+## **Installation & Setup**
+1. **Clone or Download** the project:
+   ```sh
+   git clone https://github.com/your-repo/DragonPicker.git
+   ```
+2. **Open the project** in **Unity** (Version 2022+ recommended).
+3. **Ensure scenes are added** in **Build Settings**:
+   - Go to `File → Build Settings`
+   - Add `_0Scene` (Main Menu) and `_1Scene` (Game Scene)
+4. Click **Play** ▶️ in Unity Editor to test the game.
 
-💥 Egg Collision Effects: Explosions occur when an egg hits the ground.
+---
 
-🎵 Sound Effects: Egg collisions trigger audio feedback.
+## **Game Controls**
 
-🎮 Pause & Restart Mechanism: Pause the game and restart upon losing all shields.
+| Action       | Key/Button |
+|-------------|-----------|
+| Move Shield | Mouse Move |
+| Pause       | `Space` |
+| Return to Menu | `Esc` |
+| Start Game | `Play` Button |
 
-🏆 Score System: Score increases when eggs are successfully caught.
+---
 
-📜 Main Menu: Start the game from the menu.
+## **Code Structure & Roles**
 
-Installation & Setup
+### **1️⃣ `MainMenu.cs`**
+- Handles scene transitions from the **main menu** to the **game**.
+- Prevents invalid scene loading errors.
 
-Clone or Download the project:
+### **2️⃣ `DragonPicker.cs`**
+- Manages **energy shields** and removes one when an egg is missed.
+- Restarts the game when all shields are lost.
 
-git clone https://github.com/your-repo/DragonPicker.git
+### **3️⃣ `DragonEgg.cs`**
+- Controls **egg behavior** (falling, collision, destruction).
+- Plays explosion effects when eggs hit the ground.
 
-Open the project in Unity (Version 2022+ recommended).
+### **4️⃣ `EnemyDragon.cs`**
+- Drops eggs at intervals.
+- Moves the dragon left and right randomly.
 
-Ensure scenes are added in Build Settings:
+### **5️⃣ `EnergyShield.cs`**
+- Tracks the **player’s score**.
+- Moves the shield based on **mouse position**.
+- Plays **collision sounds** when an egg is caught.
 
-Go to File → Build Settings
+### **6️⃣ `Pause.cs`**
+- Allows pausing and resuming the game.
+- Handles scene reloading for the menu.
 
-Add _0Scene (Main Menu) and _1Scene (Game Scene)
+---
 
-Click Play ▶️ in Unity Editor to test the game.
+## **Known Issues & Fixes**
 
-Game Controls
+| Issue | Solution |
+|--------|----------|
+| `Scene index out of range!` | Add all scenes in **Build Settings** (`File → Build Settings`). |
+| Egg explosion not showing | Ensure **ParticleSystem** is enabled in `DragonEgg.cs`. |
+| Buttons not working | Ensure **EventSystem** is present in the scene. |
 
-Action
+---
 
-Key/Button
+## **Future Improvements**
+✅ **Better UI Scaling** 🎨  
+✅ **Mobile Touch Controls** 📱  
+✅ **More Enemy Types** 🐉  
 
-Move Shield
+---
 
-Mouse Move
+## **Credits**
+**Developed by:** *Your Name*  
+**Tools Used:** Unity, C#, Visual Studio  
+**Assets:** Custom & Free Unity Store Assets  
 
-Pause
+🚀 *Enjoy Dragon Picker!* 🏆
 
-Space
-
-Return to Menu
-
-Esc
-
-Start Game
-
-Play Button
-
-Code Structure & Roles
-
-1️⃣ MainMenu.cs
-
-Handles scene transitions from the main menu to the game.
-
-Prevents invalid scene loading errors.
-
-2️⃣ DragonPicker.cs
-
-Manages energy shields and removes one when an egg is missed.
-
-Restarts the game when all shields are lost.
-
-3️⃣ DragonEgg.cs
-
-Controls egg behavior (falling, collision, destruction).
-
-Plays explosion effects when eggs hit the ground.
-
-4️⃣ EnemyDragon.cs
-
-Drops eggs at intervals.
-
-Moves left and right randomly.
-
-5️⃣ EnergyShield.cs
-
-Tracks the player’s score.
-
-Moves the shield based on mouse position.
-
-Plays collision sounds when an egg is caught.
-
-6️⃣ Pause.cs
-
-Allows pausing and resuming the game.
-
-Handles scene reloading for the menu.
