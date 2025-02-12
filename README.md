@@ -69,27 +69,3 @@
 
 ---
 
-## **Known Issues & Fixes**
-
-| Issue | Solution |
-|--------|----------|
-| `Scene index out of range!` | Add all scenes in **Build Settings** (`File → Build Settings`). |
-| Egg explosion not showing | Ensure **ParticleSystem** is enabled in `DragonEgg.cs`. |
-| Buttons not working | Ensure **EventSystem** is present in the scene. |
-
----
-
-## **Future Improvements**
-✅ **Better UI Scaling** 🎨  
-✅ **Mobile Touch Controls** 📱  
-✅ **More Enemy Types** 🐉  
-
----
-
-## **Credits**
-**Developed by:** *Your Name*  
-**Tools Used:** Unity, C#, Visual Studio  
-**Assets:** Custom & Free Unity Store Assets  
-
-🚀 *Enjoy Dragon Picker!* 🏆
-
